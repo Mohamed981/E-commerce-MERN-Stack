@@ -8,6 +8,26 @@ import { setCartEmpty } from "../store";
 import { Box, CircularProgress } from "@mui/material";
 
 const Checkout = () => {
+
+  const cardStyle = {
+    style: {
+      base: {
+        color: "#32325d",
+        fontFamily: 'Arial, sans-serif',
+        fontSmoothing: "antialiased",
+        fontSize: "16px",
+        "::placeholder": {
+          color: "#32325d"
+        }
+      },
+      invalid: {
+        fontFamily: 'Arial, sans-serif',
+        color: "#fa755a",
+        iconColor: "#fa755a"
+      }
+    }
+  };
+
   const dispatch = useDispatch();
   const [clientSecret, setClientSecret] = useState("");
   const [loading, setLoading] = useState(true);
@@ -58,7 +78,7 @@ const Checkout = () => {
         ) : (
           <div>
             {/* <PaymentElement /> */}
-            <CardElement />
+            <CardElement options={cardStyle} />
             <button disabled={!stripe}>Submit</button>
           </div>
         )}

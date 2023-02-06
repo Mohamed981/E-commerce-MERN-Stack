@@ -5,7 +5,7 @@
 # Run
 ## Backend
 ```terminal
-$npm run dev
+$ npm run dev
 ```
 
 ## Frontend
