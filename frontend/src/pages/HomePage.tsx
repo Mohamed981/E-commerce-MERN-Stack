@@ -21,7 +21,7 @@ const Home: FC = () => {
   return (
     <Box width="80%" margin="80px auto" paddingTop="20px">
       <Typography variant="h3" textAlign="center">
-        Our Featured <b>Products</b>
+        <b>SHOP</b>
       </Typography>
 
       <Box

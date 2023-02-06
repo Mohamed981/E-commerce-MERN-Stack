@@ -4,6 +4,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import styled from "@emotion/styled";
 import { removeFromCart, setIsCartOpen } from "../store";
 import { useNavigate } from "react-router-dom";
+import { Product } from "../models/product";
 
 const FlexBox = styled(Box)`
   display: flex;
@@ -14,8 +15,8 @@ const FlexBox = styled(Box)`
 const Cart = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const cart = useSelector((state) => state.cart.items);
-  const totalPrice = useSelector((state) => state.cart.totalprice);
+  const cart = useSelector((state:any) => state.cart.items);
+  const totalPrice = useSelector((state:any) => state.cart.totalprice);
 
   return (
     <Box
@@ -29,14 +30,14 @@ const Cart = () => {
           {/* HEADER */}
           <FlexBox mb="15px">
             <Typography sx={{paddingTop:"30px"}} variant="h3">SHOPPING BAG ({cart.length})</Typography>
-            <IconButton onClick={() => dispatch(setIsCartOpen({}))}>
+            <IconButton onClick={() => dispatch(setIsCartOpen())}>
               <CloseIcon />
             </IconButton>
           </FlexBox>
 
           {/* CART LIST */}
           <Box>
-            {cart.map((item) => (
+            {cart.map((item:Product) => (
               <Box key={`${item.name}-${item._id}`}>
                 <FlexBox p="15px 0">
                   <Box flex="1 1 40%">
@@ -89,7 +90,7 @@ const Cart = () => {
               }}
               onClick={() => {
                 navigate("/checkout");
-                dispatch(setIsCartOpen({}));
+                dispatch(setIsCartOpen());
               }}
             >
               CHECKOUT
