@@ -1,0 +1,8 @@
+[
+  { "name": "fridge", "price": 3000, "path": "photos/fridge.jpg" },
+  { "name": "cooker", "price": 5000, "path": "photos/cooker.jpg" },
+  { "name": "camera", "price": 360, "path": "photos/camera.jpg" },
+  { "name": "mobile", "price": 500, "path": "photos/mobile.jpg" },
+  { "name": "computer", "price": 350, "path": "photos/laptop.jpg" },
+  { "name": "headphone", "price": 30, "path": "photos/headphone.jpg" }
+]
