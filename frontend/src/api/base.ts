@@ -1,6 +1,6 @@
 import axios from "axios";
 const apiClient = axios.create({
-  baseURL: "http://localhost:5000/api", // <- ENV variable
+  baseURL: "https://shop-server-voaa.onrender.com", // <- ENV variable
 });
 apiClient.interceptors.request.use((config) => {
   return ({
