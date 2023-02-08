@@ -3,6 +3,10 @@
 
 
 # Run
+## Hosting
+```
+https://shop-vs6n.onrender.com
+```
 ## Backend
 ```terminal
 $ npm run dev
